@@ -1,0 +1,19 @@
+{
+    "name": "vendor/app",
+    "description": "Сокращение ссылок",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vadim Latypov"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vendor\\App\\": "app/models"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    }
+}

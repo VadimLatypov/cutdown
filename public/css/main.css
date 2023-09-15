@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Общие настройки сайта */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #fafafa;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #fafafa;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1DA1F2;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #888;
+    background-color: #fafafa;
+    transition: all 500ms ease;
+}
+
+a:hover {
+    color: #333;
+}
+
+.container {
+    width: 70%;
+    margin: 0 15%;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 1px solid #1DA1F2;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #fafafa;
+    color: #1DA1F2;
+    cursor: pointer;
+    transition: all 500ms ease;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: #1DA1F2;
+    color: #fafafa;
+}
+
+/* Навигация */
+header nav {
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+    background-color: #fafafa;
+}
+
+header nav > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav > div ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav > div ul li {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+header nav > div p.user-btn {
+    border: 1px solid #1DA1F2;
+    border-radius: 5px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+header nav > div p.user-btn:hover {
+    background-color: #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+header nav > div p.user-btn a {
+    color: #1DA1F2;
+}
+
+header nav > div p.user-btn:hover a {
+    background-color: #1DA1F2;
+    color: #fafafa;
+}
+
+
+/* Строка логотипа */
+header > div .logo {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+header > div .logo img {
+    width: 110px;
+    margin-right: 50px;
+    transition: transform 300ms ease;
+}
+
+header > div .logo img:hover {
+    transform: rotate(45deg);
+}
+
+header > div::after {
+    display: block;
+    content: '';
+    width: 100%;
+    margin: 20px 0;
+    height: 1px;
+    background-color: silver;
+}
+
+
+/* Основная часть */
+main {
+    min-height: 300px;
+}
+
+
+/* Регистрация */
+main .reg {
+    width: 500px;
+    margin: 70px auto 20px;
+}
+
+main .reg h1 {
+    font-size: 54px;
+    text-align: center;
+}
+
+main .reg p {
+    margin: 10px 0;
+}
+
+main .reg p:first-of-type {
+    font-size: 14px;
+    text-align: center;
+}
+
+main .reg p a {
+    display: inline-block;
+    position: relative;
+    color: inherit;
+    margin: 0 4px;
+    transition: margin 25ms;
+}
+
+main .reg p a svg {
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 7px) translateZ(0);
+    fill: none;
+    stroke: #1DA1F2;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke-dasharray: var(--offset, 69px) 278px;
+    stroke-dashoffset: 361px;
+    transition: stroke 250ms ease 100ms, stroke-dasharray 350ms;
+}
+
+main .reg p a:hover {
+    --offset: 180px;
+}
+
+main .reg .form-control .btn {
+    width: 100%;
+}
+
+main .reg p:last-of-type {
+    width: 300px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+
+/* Сокращение ссылок */
+main .links {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main .links p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+main .links > form .btn {
+    width: 100%;
+}
+
+main .links hr {
+    width: 300px;
+    margin: 30px auto;
+}
+
+main .links .link {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    position: relative;
+    margin-bottom: 15px;
+}
+
+main .links .link p {
+    text-align: left;
+}
+
+main .links .link p:first-of-type {
+    font-size: 16px;
+}
+
+main .links .link p:first-of-type a {
+    color: #1DA1F2;
+}
+
+main .links .link p:last-of-type {
+    margin-bottom: 0;
+}
+
+main .links .link .btn-small {
+    padding: 2px 3px;
+    margin-left: 20px;
+    border: 1px solid #888;
+    font-size: 14px;
+    color: #888;
+}
+
+main .links .link .btn-small:hover {
+    background-color: #888;
+    color: #fafafa;
+}
+
+main .links .link form .btn {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-size: 18px;
+}
+
+
+/* Личный кабинет */
+main .dashboard p {
+    margin: 20px 0;
+}
+
+
+/* Про нас */
+main .about h3 {
+    margin: 20px 0;
+}
+
+main .about p {
+    margin: 0 30px 20px;
+}
+
+
+/* Контакты */
+main .contact {
+    width: 700px;
+    margin: 20px auto;
+}
+
+main .contact h1 {
+    margin-bottom: 20px;
+}
+
+
+/* Футер */
+footer {
+    margin-top: 100px;
+    border-top: 1px solid silver;
+    padding: 30px 0;
+}
+
+footer .container,
+footer .container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container > div:first-of-type img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+footer .container > div.social p {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all 500ms ease;
+    font-size: 24px;
+}
+
+footer .container > div.social p a {
+    background-color: #eee;
+}
+
+footer .container > div.social p:hover {
+    transform: scale(1.2);
+}
+
+footer .container > div.social #telegram:hover a {
+    color: #229ED9;
+}
+
+footer .container > div.social #facebook:hover a {
+    color: #3b5998;
+}
+
+footer .container > div.social #twitter:hover a {
+    color: #111;
+}
+
+footer .container > div.social #instagram:hover a {
+    color: #E1306C;
+}

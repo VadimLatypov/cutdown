@@ -1,0 +1,86 @@
+.form-control {
+    width: 100%;
+}
+
+.form-control input,
+.form-control textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.form-control textarea {
+    resize: none;
+    height: 150px;
+    overflow-y: auto;
+}
+
+.form-control .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-control .checkbox input {
+    display: inline-block;
+    position: relative;
+    appearance: none; 
+    outline: none;
+    width: 50px;
+    height: 30px;
+    background-color: #fafafa;
+    border: 1px solid #D9DADC;
+    border-radius: 50px; box-shadow: inset -20px 0 0 0 #fafafa;
+    transition-duration: 300ms;
+    margin-right: 10px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.form-control .checkbox input:after {
+    content: "";
+    position: absolute;
+    top: 1px; 
+    left: 1px;
+    width: 26px; 
+    height: 26px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+.form-control .checkbox input:checked {
+    border-color: #1DA1F2;
+    box-shadow: inset 20px 0 0 0 #1DA1F2;
+}
+
+.form-control .checkbox input:checked:after {
+    left: 20px;
+    box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+}
+
+.form-control .error {
+    color: red;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-control div:last-of-type {
+    display: flex;
+}
+
+.form-control div:last-of-type .btn:first-of-type {
+    width: 40%;
+    margin-right: 20%;
+}
+
+.form-control div:last-of-type .btn:last-of-type {
+    width: 40%;
+}
