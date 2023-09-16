@@ -74,13 +74,33 @@
 
 .form-control div:last-of-type {
     display: flex;
+
+    @media (max-width: 490px) {
+        display: block;
+    }
 }
 
 .form-control div:last-of-type .btn:first-of-type {
     width: 40%;
     margin-right: 20%;
+
+    @media (max-width: 600px) {
+        width: 48%;
+        margin-right: 4%;
+    }
+    @media (max-width: 490px) {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 .form-control div:last-of-type .btn:last-of-type {
     width: 40%;
+
+    @media (max-width: 600px) {
+        width: 48%;
+    }
+    @media (max-width: 490px) {
+        width: 100%;
+    }
 }

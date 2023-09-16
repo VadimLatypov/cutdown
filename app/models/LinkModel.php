@@ -1,11 +1,11 @@
 <?php
-    require_once 'DB.php';
+    require_once 'DB_connect.php';
 
     class LinkModel {
         private $_db = null;
 
         public function __construct() {
-            $this->_db = DB::getInstance();
+            $this->_db = DB_connect::getInstance();
         }
 
         // Получение всех ссылок текущего пользователя

@@ -1,8 +1,8 @@
 <?php
-    class DB {
+    class DB_connect {
         private static $_db = null;
 
-        public static function getInstance() {
+        public static function getInstance(): PDO {
             if(self::$_db == null)
                 self::$_db = new PDO(
                     'mysql:host='.Config::$DB_HOST.';dbname='.Config::$DB_NAME.';', 

@@ -18,49 +18,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # Убирает из url "?url="
 RewriteRule ^(.+)$ /index.php?url=$1
 
-# Ошибка 404 - отслеживается в контроллере
-# ErrorDocument 404 /app/views/404.php
-
-# Ошибка 500
-# ErrorDocument 500 /500.php
-
 # Скрыть вывод ошибок на странице сайта
 php_flag display_startup_errors off
 php_flag display_errors off
 php_flag html_errors off
-
-
-# ------------------------------------------------------------------
-
-# НАСТРОЙКИ ФАЙЛА ПРИ ВЫГРУЗКЕ НА УДАЛЕННЫЙ СЕРВЕР
-# # Кодировка сайта
-# ServerSignature Off
-# AddDefaultCharset UTF-8
-#
-# # Обращение к файлам без расширения
-# ### Эта настройка не работает на некоторых хостингах
-# Options -MultiViews
-#
-# # Запуск движка для переписывания адреса страницы
-# RewriteEngine On
-#
-# # Базовый адрес, с которого переписываются файлы
-# RewriteBase /
-#
-# # Условия для работы с файлами
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{REQUEST_FILENAME} !-f
-#
-# # Убирает из url "?url="
-# RewriteRule ^(.+)$ /index.php?url=$1
-#
-# # Ошибка 404
-# # ErrorDocument 404 /app/views/404.php
-#
-# # Ошибка 500
-# # ErrorDocument 500 /500.php
-#
-# # Скрыть вывод ошибок на странице сайта
-# php_flag display_startup_errors off
-# php_flag display_errors off
-# php_flag html_errors off

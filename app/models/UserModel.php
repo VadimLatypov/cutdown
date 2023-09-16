@@ -1,6 +1,6 @@
 <?php
-    require_once 'DB.php';
-
+    require 'DB_connect.php';
+    
     class UserModel {
         private $login;
         private $email;
@@ -10,7 +10,7 @@
         private $_db = null;
 
         public function __construct() {
-            $this->_db = DB::getInstance();
+            $this->_db = DB_connect::getInstance();
         }
 
         public function setData($login, $email, $password, $re_password, $checkbox) {

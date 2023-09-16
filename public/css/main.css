@@ -43,6 +43,11 @@ a:hover {
 .container {
     width: 70%;
     margin: 0 15%;
+
+    @media (max-width: 768px) {
+        width: 94%;
+        margin: 0 3%;
+    }
 }
 
 .btn {
@@ -75,6 +80,10 @@ header nav > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    @media (max-width: 470px) {
+        display: block;
+    }
 }
 
 header nav > div ul {
@@ -96,6 +105,11 @@ header nav > div p.user-btn {
     padding: 10px 12px;
     cursor: pointer;
     transition: all 500ms ease;
+
+    @media (max-width: 470px) {
+        margin-top: 20px;
+        text-align: center;
+    }
 }
 
 header nav > div p.user-btn:hover {
@@ -148,13 +162,21 @@ main {
 
 /* Регистрация */
 main .reg {
-    width: 500px;
+    width: 550px;
     margin: 70px auto 20px;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
 }
 
 main .reg h1 {
     font-size: 54px;
     text-align: center;
+
+    @media (max-width: 400px) {
+        font-size: 44px;
+    }
 }
 
 main .reg p {
@@ -209,6 +231,13 @@ main .reg p:last-of-type {
 main .links {
     width: 80%;
     margin: 0 auto;
+
+    @media (min-width: 1400px) and (max-width: 1550px) {
+        width: 90%;
+    }
+    @media (max-width: 1400px) {
+        width: 100%;
+    }
 }
 
 main .links p {
@@ -228,7 +257,7 @@ main .links hr {
 
 main .links .link {
     width: 100%;
-    padding: 15px 20px;
+    padding: 15px 80px 15px 20px;
     border: 1px solid silver;
     border-radius: 10px;
     box-sizing: border-box;
@@ -251,6 +280,7 @@ main .links .link p:first-of-type a {
 
 main .links .link p:last-of-type {
     margin-bottom: 0;
+    overflow: auto;
 }
 
 main .links .link .btn-small {
@@ -259,6 +289,10 @@ main .links .link .btn-small {
     border: 1px solid #888;
     font-size: 14px;
     color: #888;
+
+    @media (max-width: 950px) {
+        margin: 10px 0px 20px;
+    }
 }
 
 main .links .link .btn-small:hover {
@@ -294,6 +328,10 @@ main .about p {
 main .contact {
     width: 700px;
     margin: 20px auto;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 }
 
 main .contact h1 {
@@ -315,9 +353,30 @@ footer .container > div {
     align-items: center;
 }
 
+footer .container {
+    @media (max-width: 400px) {
+        display: block;
+    }
+}
+
+footer .container > div {
+    @media (max-width: 400px) {
+        flex-wrap: wrap;
+    }
+}
+
 footer .container > div:first-of-type img {
     width: 50px;
     margin-right: 10px;
+}
+
+footer .container > div.social {
+    @media (max-width: 400px) {
+        margin-top: 20px;
+        position: relative;
+        left: 100%;
+        transform: translateX(-100%);
+    }
 }
 
 footer .container > div.social p {
@@ -331,6 +390,10 @@ footer .container > div.social p {
     cursor: pointer;
     transition: all 500ms ease;
     font-size: 24px;
+}
+
+footer .container > div.social p:first-of-type {
+    margin-left: 0;
 }
 
 footer .container > div.social p a {
