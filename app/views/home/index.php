@@ -62,7 +62,7 @@
                     <?php foreach ($data['links'] as $item): ?>
                         <div class="link">
                             <p>Сокращенная ссылка: 
-                                <b><a href="/link/<?=$item['token']?>" target="_blank">http://localhost/link/<?=$item['token']?></a></b>
+                                <b><a href="/link/<?=$item['token']?>" target="_blank">cutdown.ltvi.site/link/<?=$item['token']?></a></b>
                                 <button type="button" class="btn btn-small" onclick="copyLink(`<?=$item['token']?>`)" title="Скопировать ссылку">Копировать <i class="fa-solid fa-copy"></i></button>
                             </p>
                             <p>Полная ссылка: <i><?=$item['long_url']?></i></p>
