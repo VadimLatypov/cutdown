@@ -21,7 +21,7 @@
                 $user_info = $user->getUser($_COOKIE['login']);
                 
                 $link = $this->model('LinkModel');
-                $data['message'] = $link->addLink($user_info['id'], $_POST['long_url'], $_POST['token']);
+                $data['message'] = $link->addLink($user_info['id'], trim($_POST['long_url']), trim($_POST['token']));
             }
 
             // Вывод ссылок пользователя

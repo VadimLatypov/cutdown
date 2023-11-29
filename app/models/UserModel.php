@@ -14,8 +14,8 @@
         }
 
         public function setData($login, $email, $password, $re_password, $checkbox) {
-            $this->login = $login;
-            $this->email = $email;
+            $this->login = trim($login);
+            $this->email = trim($email);
             $this->password = $password;
             $this->re_password = $re_password;
             $this->checkbox = $checkbox;
@@ -24,17 +24,21 @@
         // Валидация формы регистрации
         public function validRegForm() {
             if(strlen($this->login) < 4)
-                return 'Логин не может быть короче 4 символов в длину';
+                return 'Логин не может быть меньше 4 символов в длину';
             else if(strlen($this->login) > 70)
                 return 'Логин не может быть больше 70 символов в длину';
+            else if($this->login != filter_var($this->login, FILTER_SANITIZE_SPECIAL_CHARS))
+                return 'Логин не может содержать специальные символы';
             else if($this->login == $this->getUser($this->login)['login'])
                 return 'Пользователь с таким логином уже существует';
             else if(strlen($this->email) < 6)
-                return 'Email не может быть короче 6 символов в длину';
+                return 'Email не может быть меньше 6 символов в длину';
             else if(strlen($this->email) > 100)
                 return 'Email не может быть больше 100 символов в длину';
+            else if($this->email != filter_var($this->email, FILTER_SANITIZE_EMAIL))
+                return 'Email не может содержать иные символы, кроме букв, цифр и !#$%&\'*+-=?^_`{|}~@.[]';
             else if(strlen($this->password) < 5)
-                return 'Пароль не может быть короче 5 символов в длину';
+                return 'Пароль не может быть меньше 5 символов в длину';
             else if(strlen($this->password) > 255)
                 return 'Пароль не может быть больше 255 символов в длину';
             else if($this->password != $this->re_password)
